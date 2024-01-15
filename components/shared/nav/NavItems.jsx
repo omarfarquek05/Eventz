@@ -20,10 +20,14 @@ const NavItems = () => {
             return(
                 <li key={link.route} className={`${isActive && "text-primary-500"} flex-center p-medium-16  whitespace-nowrap`}>
                 <Link href={link.route} 
-                className='px-2 py-2 bg-sky-700 rounded-full text-white 
-                hover:bg-violet-600 hover:text-yellow-50
-                 active:bg-violet-700  focus:outline-none focus:ring focus:ring-violet-300 '>
-                {link.label}</Link>
+                className="animate-background inline-block rounded-lg
+                 bg-gray-900 from-pink-500 via-red-500 to-yellow-500
+                  bg-[length:_400%_400%] p-0.5 [animation-duration:_6s] hover:bg-gradient-to-r dark:bg-gray-800">
+         <span className="block rounded-lg bg-white px-5 py-3 text-sm font-medium 
+         text-gray-900 dark:bg-gray-900 dark:text-white">
+  {link.label}
+  </span>
+  </Link>  
                 </li>
             )
         })

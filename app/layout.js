@@ -1,6 +1,8 @@
 import { Poppins } from 'next/font/google'
 import './globals.css'
 import { ClerkProvider } from "@clerk/nextjs";
+import { ThemeProvider } from "@/components/shared/theme/theme-provider"
+import { Toaster } from "@/components/ui/toaster"
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -16,9 +18,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+    <ThemeProvider attribute="class"
+    defaultTheme="system"
+    enableSystem
+    disableTransitionOnChange>
     <ClerkProvider>
       <body className={poppins.className}>{children}</body>
+      <Toaster />
       </ClerkProvider>
+      </ThemeProvider>
     </html>
   )
 }

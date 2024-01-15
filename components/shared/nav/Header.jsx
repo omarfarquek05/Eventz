@@ -5,10 +5,11 @@ import Image from "next/image"
 import Link from "next/link"
 import NavItems from "./NavItems";
 import MobileNav from "./MobileNav";
+import ModeToggle from "@/components/shared/theme/ModeToggle"
 
 const Header = () => {
   return (
-    <header className=" w-full border-b  bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500">
+    <header className=" w-full border-b  bg-gradient-to-r from-[#FFCF26] via-[#3929F1] to-[#EB22CB]">
       <div className="wrapper flex items-center justify-between">
         <Link href="/" className="w-36">
           <Image
@@ -18,6 +19,7 @@ const Header = () => {
             alt="Evently logo"
           />
         </Link>
+        <ModeToggle/>
          
         <SignedIn>
         <nav className="md:flex-between hidden w-full max-w-xs">
