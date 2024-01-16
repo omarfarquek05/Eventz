@@ -5,6 +5,7 @@ import { checkoutOrder } from '@/lib/actions/order.actions';
 
 loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
+
 const Checkout = ({event, userId}) => {
 
    useEffect(() => {
@@ -15,12 +16,14 @@ const Checkout = ({event, userId}) => {
     }
 
     if (query.get('canceled')) {
-      console.log('Order canceled -- continue to shop around and checkout when you’re ready.');
+      console.log('Order canceled -- continue to shop around and checkout when you are ready.');
     }
   }, []);
 
 
     const onCheckout = async () => {
+   
+
         const order = {
           eventTitle: event.title,
           eventId: event._id,

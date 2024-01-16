@@ -1,12 +1,12 @@
 import stripe from 'stripe'
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { createOrder } from '@/lib/actions/order.actions'
 
-export async function POST(request) {
-  const body = await request.text()
+export async function POST(NextRequest) {
+  const body = await NextRequest.text()
 
-  const sig = request.headers.get('stripe-signature') 
-  const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET
+  const sig = NextRequest.headers.get('stripe-signature') 
+  const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET 
 
   let event
 
