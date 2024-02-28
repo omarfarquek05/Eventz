@@ -1,3 +1,5 @@
+![Screenshot (192)](https://github.com/omarfarquek05/Eventz/assets/89341479/eff3bfaa-8490-4dc7-8953-80eaa09d885b)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
